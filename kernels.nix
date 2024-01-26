@@ -39,4 +39,12 @@ in {
     kernelImageName = "Image";
     kernelSrc = sources.linux-oneplus-8t-blu-spark.src;
   };
+
+  fajita = pipeline {
+    anyKernelVariant = "osm0sis";
+    clangVersion = "latest";
+    kernelDefconfigs = ["enchilada_defconfig"];
+    kernelImageName = "Image";
+    kernelSrc = sources.linux-oneplus-fajita.src;
+  };
 }
